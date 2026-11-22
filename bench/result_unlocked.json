@@ -1,0 +1,21 @@
+{
+ "gpu": "NVIDIA GeForce RTX 3060 Ti",
+ "results": {
+  "FP32 (TF32 off)": {
+   "ms": 14.774,
+   "tflops": 9.3
+  },
+  "FP32 via TF32 tensor (unlock target)": {
+   "ms": 4.827,
+   "tflops": 28.47
+  },
+  "BF16 tensor": {
+   "ms": 2.296,
+   "tflops": 59.85
+  },
+  "FP16 tensor": {
+   "ms": 2.334,
+   "tflops": 58.9
+  }
+ }
+}
