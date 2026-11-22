@@ -1,0 +1,157 @@
+[    194ms] INFO : loader::logging: log file \loader.log opened on boot volume
+[    221ms] INFO : loader::logging: nv-uefi-unlocker v2.1.12-rc6 (tx builds carry the gated transaction; readonly = console output only)
+[    234ms] INFO : loader: BOOT: logger init returned, main continuing
+[    245ms] INFO : loader: BOOT: diag7 log-commit=0 (0=v2.1.9 default, 1=+marker Close, 2=+create Close; auto-degrades to 0 if the reopen chain refuses)
+[    258ms] INFO : loader: WATCHDOG: disabled
+[    268ms] INFO : loader::banner: ==================================================
+[    270ms] INFO : loader::banner:  nv-uefi-unlocker v2.1.12-rc6 (built Sun 2026-11-22 21:28:05 +08:00)
+[    289ms] INFO : loader::banner:  ** TX BUILD: CONTAINS GPU-WRITE PATHS **
+[    322ms] INFO : loader::banner:  transaction: claim->gfw->fwsec->booter->selectors->flr
+[    324ms] INFO : loader::banner: ======== PRESS SPACE or ENTER to CONTINUE ========
+[    326ms] INFO : loader::banner: ======== PRESS SPACE or ENTER to CONTINUE ========
+[    328ms] INFO : loader::banner: ======== PRESS SPACE or ENTER to CONTINUE ========
+[    330ms] INFO : loader::banner:   other key or 30s no-key = ABORT; unlocks NOTHING
+[    332ms] INFO : loader::banner:   other key or 30s no-key = ABORT; unlocks NOTHING
+[    334ms] INFO : loader::banner:   other key or 30s no-key = ABORT; unlocks NOTHING
+[    336ms] INFO : loader::banner:  armed: \i_know_what_i_am_doing.txt = 5s auto-run, any key aborts
+[    349ms] INFO : loader::banner:  multi-GPU: no marker = every supported card in order;
+[    352ms] INFO : loader::banner:             \tx-select-bdf.txt (bb:dd.f) pins exactly one
+[    354ms] INFO : loader::banner:  failure = emergency FLR (per card; the next card still runs);
+[    366ms] INFO : loader::banner:             \tx-stop-on-failure.txt = halt instead: no FLR, no handoff, no chain-load
+[    379ms] INFO : loader::banner: ==================================================
+[    381ms] INFO : loader::banner: PHASE: CONFIRM
+[    392ms] INFO : loader::pci: DIAG-CONSOLE-OUT: handle Handle(0x855aef98) has no device path
+[    405ms] INFO : loader::pci: DIAG-CONSOLE-IN: handle Handle(0x855aef98) has no device path
+[    417ms] INFO : loader::pci: DIAG-BOOTVOL: device Handle(0x855a9d98) uart=false anchor=0000:00:14.0 = 8086:06ed dp=02010c00d041030a0000000001010600001403050600030004012a000100000000200000000000000004b7030000000044cb4228000000000000000000000000...
+[    433ms] INFO : loader::chainload: EARLY: reconnect pass over 22 PciIo handles (NVIDIA display skipped)
+[    521ms] INFO : loader::chainload: EARLY: reconnect pass done
+[    536ms] INFO : loader::keywait: INPUT-SETTLE: ConIn reset ok
+[    537ms] INFO : loader::keywait: INPUT-SETTLE: drained 0 buffered key(s)
+[    839ms] INFO : loader::keywait: INPUT-SETTLE: settle done after 300 ms, discarded 0 key(s), quiet 300 ms, 0 swallowed after suppression
+[    847ms] INFO : loader: CONFIRM: no armed marker - Space/Enter/30s confirm semantics
+[    910ms] INFO : loader::keywait: CONFIRM: Space pressed, proceeding
+[    921ms] INFO : loader::pci: PHASE: ENUMERATE (read-only)
+[    933ms] INFO : loader::pci: ENUMERATE: 22 PciIo handles
+[    934ms] INFO : loader::pci: PCI 0000:00:00.0 8086:4c43 class 000604
+[    936ms] INFO : loader::pci: PORT-DIAG: 0000:00:00.0 buses=0xffffffff pmcsr=None lnkctl=None lnksta=None lnkcap=None bcr=Some(2) | D0 ldis=0 LA=1 spd=x0 w=x0 secbus=0xff
+[    951ms] INFO : loader::pci: PCI 0000:00:01.0 8086:4c01 class 000604
+[    952ms] INFO : loader::pci: PORT-DIAG: 0000:00:01.0 buses=0x00000000 pmcsr=Some(0) lnkctl=Some(65) lnksta=Some(28931) lnkcap=Some(19716) bcr=Some(26) | D0 ldis=0 LA=1 spd=x3 w=x16 secbus=0x00
+[    967ms] INFO : loader::pci: PORT-DIAG: 0000:02:00.0 DEAD (vendor 0xffff) - judged by SLOT-REVIVE only when \tx-revive-dead-slot.txt is armed
+[    980ms] INFO : loader::pci: PCI 0000:02:00.0 empty slot (vendor 0xffff)
+[    982ms] INFO : loader::pci: PORT-DIAG: 0000:02:00.1 DEAD (vendor 0xffff) - judged by SLOT-REVIVE only when \tx-revive-dead-slot.txt is armed
+[    995ms] INFO : loader::pci: PCI 0000:02:00.1 empty slot (vendor 0xffff)
+[    997ms] INFO : loader::pci: PCI 0000:00:02.0 8086:4c8a class 000300
+[    999ms] INFO : loader::pci: PCI 0000:00:04.0 8086:4c03 class 001180
+[   1000ms] INFO : loader::pci: PCI 0000:00:08.0 8086:4c11 class 000880
+[   1002ms] INFO : loader::pci: PCI 0000:00:12.0 8086:06f9 class 001180
+[   1004ms] INFO : loader::pci: PCI 0000:00:14.0 8086:06ed class 000c03
+[   1005ms] INFO : loader::pci: PCI 0000:00:14.2 8086:06ef class 000500
+[   1017ms] INFO : loader::pci: PCI 0000:00:14.3 8086:06f0 class 000280
+[   1018ms] INFO : loader::pci: PCI 0000:00:15.0 8086:06e8 class 000c80
+[   1020ms] INFO : loader::pci: PCI 0000:00:16.0 8086:06e0 class 000780
+[   1022ms] INFO : loader::pci: PCI 0000:00:17.0 8086:06d2 class 000106
+[   1023ms] INFO : loader::pci: PCI 0000:00:1b.0 8086:06ac class 000604
+[   1025ms] INFO : loader::pci: PORT-DIAG: 0000:00:1b.0 buses=0x00030300 pmcsr=Some(0) lnkctl=Some(64) lnksta=Some(28739) lnkcap=Some(16451) bcr=Some(18) | D0 ldis=0 LA=1 spd=x3 w=x4 secbus=0x03
+[   1040ms] INFO : loader::pci: PCI 0000:03:00.0 1e95:9100 class 000108
+[   1042ms] INFO : loader::pci: PCI 0000:00:1c.0 8086:06bc class 000604
+[   1056ms] INFO : loader::pci: PORT-DIAG: 0000:00:1c.0 buses=0x00040400 pmcsr=Some(0) lnkctl=Some(66) lnksta=Some(28689) lnkcap=Some(19475) bcr=Some(18) | D0 ldis=0 LA=1 spd=x1 w=x1 secbus=0x04
+[   1084ms] INFO : loader::pci: PCI 0000:04:00.0 10ec:2600 class 000200
+[   1099ms] INFO : loader::pci: PCI 0000:00:1f.0 8086:0684 class 000601
+[   1113ms] INFO : loader::pci: PCI 0000:00:1f.3 8086:f1c8 class 000403
+[   1127ms] INFO : loader::pci: PCI 0000:00:1f.4 8086:06a3 class 000c05
+[   1142ms] INFO : loader::pci: PCI 0000:00:1f.5 8086:06a4 class 000c80
+[   1155ms] INFO : loader::gop: PHASE: GOP-PROBE (read-only)
+[   1179ms] INFO : loader::gop: GOP-PROBE: 1 GOP handles
+[   1229ms] INFO : loader::gop: GOP handle Handle(0x839d3d98): 2560x1080 Bgr
+[   1248ms] INFO : loader: SAMPLE: no NVIDIA GPU selected or present, skipped (negative control path)
+[   1266ms] INFO : loader::chainload: CHAIN-PRE: no \tx-preload.txt - preload is opt-in since #198, legacy chain path
+[   1291ms] INFO : loader::revive: SLOT-REVIVE: armed (\tx-revive-dead-slot.txt or \tx-revive-force-sbr.txt, FORCE-SBR override on) - scanning for dead downstream slots
+[   1317ms] INFO : loader::revive: SLOT-REVIVE: 2 dead function(s), 4 alive bridge(s)
+[   1341ms] INFO : loader::revive: SLOT-REVIVE: 0000:02:00.0 dead but no alive parent port - nothing to act on
+[   1366ms] INFO : loader::revive: SLOT-REVIVE: 0000:02:00.1 dead but no alive parent port - nothing to act on
+[   1391ms] INFO : loader::tx: TX-ASSET-DIAG: \tx-select-bdf.txt absent
+[   1415ms] INFO : loader: TX: no transaction target (selection marker refused, or no supported GPU) - chain-loading unchanged Windows
+[   1440ms] INFO : loader::chainload: PHASE: CHAIN
+[   1465ms] INFO : loader::tx: TX-ASSET-CACHE: cleared 1 entries, 0 bytes handed back to the firmware allocator
+[   1481ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x100000-0x40000000 (1023 MiB) type=CONVENTIONAL
+[   1505ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x40000000-0x40400000 (4 MiB) type=RESERVED
+[   1530ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x40400000-0x612dd000 (526 MiB) type=CONVENTIONAL
+[   1555ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x612dd000-0x6131d000 (0 MiB) type=BOOT_SERVICES_DATA
+[   1579ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x6131d000-0x75400000 (320 MiB) type=CONVENTIONAL
+[   1604ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75400000-0x75800000 (4 MiB) type=BOOT_SERVICES_DATA
+[   1628ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75800000-0x758f8000 (0 MiB) type=CONVENTIONAL
+[   1652ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x758f8000-0x759f8000 (1 MiB) type=BOOT_SERVICES_DATA
+[   1676ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x759f8000-0x75a13000 (0 MiB) type=BOOT_SERVICES_CODE
+[   1700ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75a13000-0x75a3e000 (0 MiB) type=BOOT_SERVICES_DATA
+[   1724ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75a3e000-0x75a42000 (0 MiB) type=BOOT_SERVICES_CODE
+[   1747ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75a42000-0x75a56000 (0 MiB) type=BOOT_SERVICES_DATA
+[   1778ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75a56000-0x75a6f000 (0 MiB) type=BOOT_SERVICES_CODE
+[   1822ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75a6f000-0x75a81000 (0 MiB) type=BOOT_SERVICES_DATA
+[   1846ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75a81000-0x75a8b000 (0 MiB) type=BOOT_SERVICES_CODE
+[   1870ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75a8b000-0x75aa5000 (0 MiB) type=BOOT_SERVICES_DATA
+[   1893ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75aa5000-0x75ac1000 (0 MiB) type=BOOT_SERVICES_CODE
+[   1917ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75ac1000-0x75ac2000 (0 MiB) type=ACPI_NON_VOLATILE
+[   1940ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75ac2000-0x75ac3000 (0 MiB) type=RUNTIME_SERVICES_DATA
+[   1963ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75ac3000-0x75b60000 (0 MiB) type=BOOT_SERVICES_DATA
+[   1985ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75b60000-0x75b66000 (0 MiB) type=BOOT_SERVICES_CODE
+[   2008ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75b66000-0x75b7c000 (0 MiB) type=BOOT_SERVICES_DATA
+[   2031ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75b7c000-0x75bad000 (0 MiB) type=BOOT_SERVICES_CODE
+[   2053ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75bad000-0x75bae000 (0 MiB) type=BOOT_SERVICES_DATA
+[   2075ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75bae000-0x75bc0000 (0 MiB) type=BOOT_SERVICES_CODE
+[   2097ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75bc0000-0x75bd0000 (0 MiB) type=BOOT_SERVICES_DATA
+[   2120ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75bd0000-0x75bec000 (0 MiB) type=BOOT_SERVICES_CODE
+[   2142ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x75bec000-0x772b0000 (22 MiB) type=BOOT_SERVICES_DATA
+[   2164ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x772b0000-0x772cd000 (0 MiB) type=BOOT_SERVICES_CODE
+[   2186ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x772cd000-0x7f96e000 (134 MiB) type=CONVENTIONAL
+[   2208ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x7f96e000-0x804db000 (11 MiB) type=BOOT_SERVICES_DATA
+[   2231ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x804db000-0x80707000 (2 MiB) type=CONVENTIONAL
+[   2254ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x80707000-0x80818000 (1 MiB) type=BOOT_SERVICES_DATA
+[   2276ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x80818000-0x808be000 (0 MiB) type=CONVENTIONAL
+[   2323ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x808be000-0x810af000 (7 MiB) type=BOOT_SERVICES_DATA
+[   2345ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x810af000-0x810f2000 (0 MiB) type=CONVENTIONAL
+[   2366ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x810f2000-0x81266000 (1 MiB) type=BOOT_SERVICES_DATA
+[   2387ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x81266000-0x81281000 (0 MiB) type=CONVENTIONAL
+[   2408ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x81281000-0x81298000 (0 MiB) type=BOOT_SERVICES_DATA
+[   2429ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x81298000-0x8129d000 (0 MiB) type=CONVENTIONAL
+[   2449ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x8129d000-0x825d5000 (19 MiB) type=BOOT_SERVICES_DATA
+[   2470ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x825d5000-0x82631000 (0 MiB) type=CONVENTIONAL
+[   2491ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x82631000-0x82634000 (0 MiB) type=BOOT_SERVICES_DATA
+[   2512ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x82634000-0x8263c000 (0 MiB) type=CONVENTIONAL
+[   2533ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x8263c000-0x8263d000 (0 MiB) type=BOOT_SERVICES_DATA
+[   2554ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x8263d000-0x8263e000 (0 MiB) type=CONVENTIONAL
+[   2574ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x8263e000-0x826a3000 (0 MiB) type=BOOT_SERVICES_DATA
+[   2594ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x826a3000-0x826a5000 (0 MiB) type=CONVENTIONAL
+[   2615ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x826a5000-0x8275e000 (0 MiB) type=BOOT_SERVICES_DATA
+[   2635ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x8275e000-0x82792000 (0 MiB) type=CONVENTIONAL
+[   2655ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x82792000-0x82e47000 (6 MiB) type=BOOT_SERVICES_DATA
+[   2675ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x82e47000-0x836e6000 (8 MiB) type=CONVENTIONAL
+[   2695ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x836e6000-0x83712000 (0 MiB) type=BOOT_SERVICES_DATA
+[   2715ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x83712000-0x837e3000 (0 MiB) type=CONVENTIONAL
+[   2734ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x837e3000-0x870b8000 (56 MiB) type=BOOT_SERVICES_DATA
+[   2761ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x870b8000-0x873aa000 (2 MiB) type=CONVENTIONAL
+[   2799ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x873aa000-0x87ea3000 (10 MiB) type=BOOT_SERVICES_CODE
+[   2819ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x87ea3000-0x8eef2000 (112 MiB) type=RESERVED
+[   2839ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x8eef2000-0x8ef89000 (0 MiB) type=ACPI_RECLAIM
+[   2859ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x8ef89000-0x8f188000 (1 MiB) type=ACPI_NON_VOLATILE
+[   2879ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x8f188000-0x90e00000 (28 MiB) type=RUNTIME_SERVICES_DATA
+[   2899ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x90e00000-0x90fff000 (1 MiB) type=RUNTIME_SERVICES_CODE
+[   2920ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x90fff000-0x91000000 (0 MiB) type=BOOT_SERVICES_DATA
+[   2940ms] INFO : loader::chainload: CHAIN-MEMMAP: 0x100000000-0x140000000 (1024 MiB) type=CONVENTIONAL
+[   2960ms] INFO : loader::chainload: CHAIN-MEMMAP: 2015 MiB conventional / 128 MiB resident (LOADER+BS) below 4GiB, largest block 1023 MiB (80 descriptors, 64 shown)
+[   2982ms] INFO : loader::chainload: CHAIN-MEMMAP-TYPES: counted=80/80 reserved=9 loader_code=1 loader_data=0 bs_code=11 bs_data=27 rt_code=1 rt_data=2 conv=21 unusable=0 acpi_reclaim=1 acpi_nv=2 mmio=5 mmio_port=0 pal=0 pmem=0 oem=0 | tiny_conv(<=64KiB): 4 blocks, 0 MiB
+[   3008ms] INFO : loader::chainload: CHAIN-BOOT: BootOrder 4 entries
+[   3028ms] INFO : loader::chainload: CHAIN-BOOT: [0] Boot0000: attrs=0x1 desc="tWindows Boot Manager" path= hd(part1,sig2:0de9013e9c129d4082f2d57418f18f75) file:"\EFI\MICROSOFT\BOOT\BOOTMGFW.EFI" END  <WINDOWS>
+[   3053ms] INFO : loader::chainload: CHAIN-BOOT: [1] Boot0004: attrs=0x1 desc="UEFI: Generic-SD/MMC 1.00" path= node(0x02,0x01,12) node(0x01,0x01,6) node(0x03,0x05,6) hd(part1,sig1:44cb4228000000000000000000000000) END
+[   3079ms] INFO : loader::chainload: CHAIN-BOOT: [2] Boot0002: attrs=0x1 desc="ØOnboard NIC(IPV4)" path= node(0x02,0x01,12) node(0x01,0x01,6) node(0x01,0x01,6) node(0x03,0x0b,37) node(0x03,0x0c,27) END
+[   3104ms] INFO : loader::chainload: CHAIN-BOOT: [3] Boot0003: attrs=0x1 desc="ùOnboard NIC(IPV6)" path= node(0x02,0x01,12) node(0x01,0x01,6) node(0x01,0x01,6) node(0x03,0x0b,37) node(0x03,0x0d,60) END
+[   3128ms] INFO : loader::chainload: CHAIN-BOOT: firmware's first Windows target = [0] Boot0000
+[   3151ms] INFO : loader::chainload: CHAIN: reconnect pass over 22 PciIo handles (NVIDIA display skipped)
+[   3247ms] INFO : loader::chainload: CHAIN: reconnect pass done
+[   3272ms] INFO : loader::chainload: CHAIN: 2 SimpleFileSystem handles
+[   3296ms] INFO : loader::chainload: CHAIN-BOOT: firmware resolve: 4 entries, self=Boot0004
+[   3319ms] INFO : loader::chainload: CHAIN-BOOT: firmware resolve: [0] Boot0000 short-form HD option hd(part1,sig3e01e90d-129c-409d-82f2-d57418f18f75) - matching partition identity (firmware BmExpandPartitionDevicePath)
+[   3439ms] INFO : loader::chainload: CHAIN-BOOT: firmware resolve: [0] Boot0000 short-form HD identity match on Handle(0x8557eb98) (vol=hd(part1,sig3e01e90d-129c-409d-82f2-d57418f18f75)) - not by path alignment
+[   3465ms] INFO : loader::chainload: CHAIN-BOOT: firmware resolve: [0] Boot0000 -> '\EFI\MICROSOFT\BOOT\BOOTMGFW.EFI' on the firmware's volume - chaining its choice
+[   3489ms] INFO : loader::chainload: CHAIN: LoadImage (FromDevicePath)
+[   3608ms] INFO : loader::chainload: CHAIN-BOUNDARY: LoadImage ok - OS loader image resident
+[   3632ms] INFO : loader::chainload: CHAIN-BOUNDARY: StartImage enter - control passes to the OS loader; the next durable record (if any) comes from \ebs-watch.log with \tx-ebs-watch.txt armed, or from a later boot
